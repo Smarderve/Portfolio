@@ -1,0 +1,262 @@
+*{
+    cursor: default;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: black;
+    color: white;
+}
+
+header{
+    margin-top: 20px;
+    margin-right: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: transparent;
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    font-size: 4rem;
+    color: red;
+    font-weight: 700;
+    transition: 0.4s ease-in-out;
+    margin-right: 60px;
+    margin-left: 0px;
+}
+
+/*.logo:hover{
+    transform: scale(1.1);
+}*/
+
+nav a{
+   font-size: 1.4rem;
+   color: white;
+   cursor: pointer;
+   margin-left: 3rem;
+   margin-right: 20px;
+   font-weight: 200;
+   transition: 0.3s ease;
+   border-bottom: 3px solid transparent; 
+}
+
+nav a.active{
+    font-weight: 700;
+    font-size: 1.9rem;
+    color: rgb(252, 5, 5);
+    border-bottom: 3px solid red;
+}
+
+section{
+    min-height: 100vh;
+    padding: 5rem 9% 5rem;
+}
+
+.home{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    background-color: black;
+}
+
+.home .home-content h1{
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 5rem;
+}
+
+span{
+    color: rgb(170, 9, 9);
+}
+
+.home-content h3{
+    font-size: 3rem;
+    margin-bottom: 4rem;
+    font-weight: 700;
+}
+
+.home-image{
+    border-radius: 50%;
+    margin-left: 15px;
+}
+
+.home-image img{
+    position: relative;
+    width: 25vw;
+    height: 25vw;
+    margin: 10px;
+    border-radius: 50%;
+    box-shadow: 0 0 25px red;
+    cursor: pointer;
+    transition: 0.3s linear;
+}
+
+
+/*.home-image img:hover{
+    font-size: 1.8rem;
+    font-weight: 500;
+}*/
+
+.social-icons a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent;
+    color: rgb(177, 171, 171);
+    box-shadow: 0px 0px 10px red;
+    border: 1px solid rgb(14, 13, 13);
+    font-size: 2rem;
+    border-radius: 50%;
+    margin: 3rem 1.5rem 3rem;
+    transition: 0.3s ease;
+}
+
+.social-icons a svg,
+.social-icons a svg path{
+    cursor: pointer;
+    color: rgb(177, 171, 171);
+}
+
+.social-icons a:hover{
+    background-color: rgb(92, 14, 14);
+    transform: scale(1.1);
+    border: 1px solid rgb(163, 145, 145);
+}
+
+.social-icons a:active{
+    transform: scale(0.9);
+}
+
+.typing-text{
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+}
+
+.typing-text span{
+    position: relative;
+}
+
+.typing-text span::before{
+    content: "Software Developer.";
+    color: red;
+    animation: words 20s infinite;
+}
+
+.typing-text span::after{
+    content: "";
+    background-color: black;
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid black;
+    right: -8;
+    animation: cursor 0.6s infinite;
+}
+
+@keyframes cursor{
+    to{
+        border-left: 3px solid red;
+    }
+}
+
+@keyframes words{
+
+    0%,20%{
+        content: "System Developer.";
+    }
+
+    21%, 40%{
+        content: "Web Developer.";
+    }
+
+    41%, 60%{
+        content: "Game Developer.";
+    }
+
+    61%, 80%{
+        content: "Web Designer.";
+    }
+
+    81%, 100%{
+        content: "Hacker.";
+    }
+}
+
+@media(max-width: 1000px){
+    .home{
+        gap: 4rem;
+    }
+}
+
+@media(max-width:995px){
+
+    body{
+        width: auto;
+        height: calc(100%);
+    }
+
+    .home{
+        flex-direction: column;
+        margin: 5rem 4rem;
+    }
+
+    .home .home-content h3{
+        font-size: 2.5rem;
+    }
+
+    .home-content h1{
+        font-size: 5rem;
+    }
+
+    .home-image img{
+        height: 55vw;
+        width: 55vw;
+        margin-top: 4rem;
+    }
+                
+    .social-icons a{
+        justify-content: center;
+        align-items: center;
+        width: 4rem;
+        height: 4rem;
+        font-size: 1rem;
+        margin: 2rem 0.5rem 0rem;
+        transition: 0.3s ease;
+    }
+
+    .social-icons a:hover{
+        transform: scale(1.1);
+    }
+
+    .social-icons a:active{
+        transform: scale(0.9);
+    }
+
+    nav a{
+        display: none;
+    }
+}
