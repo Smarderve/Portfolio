@@ -1,10 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
 *{
     cursor: default;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
-    font-family: sans-serif;
+    
 }
 
 html{
@@ -17,10 +19,12 @@ body{
     overflow-x: hidden;
     background-color: black;
     color: white;
+    font-family: poppins;
 }
 
 header{
-    margin-top: 20px;
+    font-family: sans-serif;
+    margin-top: 0px;
     margin-right: 20px;
     position: fixed;
     top: 0;
@@ -37,7 +41,7 @@ header{
 
 .logo{
     font-size: 4rem;
-    color: red;
+    color: cyan;
     font-weight: 700;
     transition: 0.4s ease-in-out;
     margin-right: 60px;
@@ -58,8 +62,8 @@ nav a{
 nav a.active{
     font-weight: 700;
     font-size: 1.9rem;
-    color: rgb(252, 5, 5);
-    border-bottom: 3px solid red;
+    color: cyan;
+    border-bottom: 3px solid cyan;
 }
 
 section{
@@ -95,6 +99,9 @@ span{
 .home-image{
     border-radius: 50%;
     margin-left: 15px;
+    animation: shadowPulse 2s infinite ease-in-out;
+    transition: 0.3s linear;
+    transition-delay: 3s;
 }
 
 .home-image img{
@@ -103,9 +110,50 @@ span{
     height: 25vw;
     margin: 10px;
     border-radius: 50%;
-    box-shadow: 0 0 25px red;
     cursor: pointer;
-    transition: 0.3s linear;
+}
+
+
+@keyframes shadowPulse {
+    0% {
+        box-shadow: 0 0 10px red, 0 0 3px red;
+    }
+    5%{
+        box-shadow: 0 0 13px red, 0 0 5px red;
+    }
+    10%{
+        box-shadow: 0 0 15px red, 0 0 10px red;
+    }
+    15%{
+        box-shadow: 0 0 18px red, 0 0 15px red;
+    }
+    25% {
+        box-shadow: 0 0 20px red, 0 0 20px red;
+    }
+    40% {
+        box-shadow: 0 0 25px red, 0 0 30px red;
+    }
+    50% {
+        box-shadow: 0 0 30px red, 0 0 40px red;
+    }
+    60% {
+        box-shadow: 0 0 25px red, 0 0 30px red;
+    }
+    75% {
+        box-shadow: 0 0 20px red, 0 0 20px red;
+    }
+    80%{
+         box-shadow: 0 0 20px red, 0 0 15px red;
+    }
+    90%{
+        box-shadow: 0 0 15px red, 0 0 10px red;
+    }
+    95%{
+        box-shadow: 0 0 13px red, 0 0 5px red;
+    }
+    100% {
+        box-shadow: 0 0 10px red, 0 0 3px red;
+    }
 }
 
 .social-icons a{
@@ -204,14 +252,27 @@ span{
 }
 
 .card{
-    background-color: rgb(252, 5, 5);
-    border-radius: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(46, 46, 65);
+    border-radius: 7%;
+    border: 1px solid black;
+    box-shadow: 0 0 10px cyan;
     width: 20rem;
     height: 20rem;
     padding: 2rem;
+    transition: all 0.3s ease-in-out;
 }
 
-/* ===== RESPONSIVE STYLES - ADD THIS AT THE END ===== */
+.card:hover{
+    transform: rotateY(30deg)  scale(1.01);
+    box-shadow: 0px 0px 5px cyan;
+
+}
+
+/* ===== RESPONSIVE STYLES ===== */
+
 @media (max-width: 768px) {
     html {
         font-size: 55%;
