@@ -229,13 +229,13 @@ span{
         content: "Web Developer.";
     }
     41%, 60%{
-        content: "Game Developer.";
+        content: "Software Developer.";
     }
     61%, 80%{
         content: "Web Designer.";
     }
     81%, 100%{
-        content: "Hacker.";
+        content: "Graphics Designer";
     }
 }
 
@@ -316,7 +316,7 @@ span{
     
     .home-image {
         margin-left: 0;
-        order: -1; /* Move image above text on mobile */
+        order: -1; 
     }
     
     .home-image img {
