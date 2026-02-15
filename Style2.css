@@ -1,12 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
 *{
-    cursor: default;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    text-decoration: none;
-    
 }
 
 html{
@@ -20,6 +17,7 @@ body{
     background-color: black;
     color: white;
     font-family: poppins;
+    cursor: default;
 }
 
 header{
@@ -41,6 +39,7 @@ header{
 
 .logo{
     font-size: 4rem;
+    text-decoration: none;
     color: cyan;
     font-weight: 700;
     transition: 0.4s ease-in-out;
@@ -49,21 +48,14 @@ header{
 }
 
 nav a{
-   font-size: 1.4rem;
-   color: white;
-   cursor: pointer;
-   margin-left: 3rem;
-   margin-right: 20px;
-   font-weight: 200;
-   transition: 0.3s ease;
-   border-bottom: 3px solid transparent; 
-}
-
-nav a.active{
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: white;
+    cursor: pointer;
+    margin: 0 20px;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent; 
     font-weight: 700;
-    font-size: 1.9rem;
-    color: cyan;
-    border-bottom: 3px solid cyan;
 }
 
 section{
@@ -71,7 +63,7 @@ section{
     padding: 5rem 9% 5rem;
 }
 
-.home{
+#home-section{
     display:flex;
     justify-content: center;
     align-items: center;
@@ -79,11 +71,11 @@ section{
     background-color: black;
 }
 
-.home .home-content h1{
+#home-section .home-content h1{
     font-size: 4rem;
     font-weight: 700;
     line-height: 1.3;
-    margin-bottom: 5rem;
+    margin-bottom: 10px;
 }
 
 span{
@@ -92,8 +84,15 @@ span{
 
 .home-content h3{
     font-size: 3rem;
-    margin-bottom: 4rem;
+    margin-bottom: 10px;
     font-weight: 700;
+}
+
+.home-content p{
+    font-size: 1.4rem;
+    color: rgb(177, 171, 171);
+    max-width: 700px;
+    margin-bottom: 20px;
 }
 
 .home-image{
@@ -106,7 +105,7 @@ span{
 
 .home-image img{
     position: relative;
-    width: 25vw;
+    width: 23vw;
     height: 25vw;
     margin: 10px;
     border-radius: 50%;
@@ -116,43 +115,43 @@ span{
 
 @keyframes shadowPulse {
     0% {
-        box-shadow: 0 0 10px red, 0 0 3px red;
+        box-shadow: 0 0 10px darkred, 0 0 3px darkred;
     }
     5%{
-        box-shadow: 0 0 13px red, 0 0 5px red;
+        box-shadow: 0 0 13px darkred, 0 0 5px darkred;
     }
     10%{
-        box-shadow: 0 0 15px red, 0 0 10px red;
+        box-shadow: 0 0 15px darkred, 0 0 10px darkred;
     }
     15%{
-        box-shadow: 0 0 18px red, 0 0 15px red;
+        box-shadow: 0 0 18px darkred, 0 0 15px darkred;
     }
     25% {
-        box-shadow: 0 0 20px red, 0 0 20px red;
+        box-shadow: 0 0 20px darkred, 0 0 20px darkred;
     }
     40% {
-        box-shadow: 0 0 25px red, 0 0 30px red;
+        box-shadow: 0 0 25px darkred, 0 0 30px darkred;
     }
     50% {
-        box-shadow: 0 0 30px red, 0 0 40px red;
+        box-shadow: 0 0 30px darkred, 0 0 40px darkred;
     }
     60% {
-        box-shadow: 0 0 25px red, 0 0 30px red;
+        box-shadow: 0 0 25px darkred, 0 0 30px darkred;
     }
     75% {
-        box-shadow: 0 0 20px red, 0 0 20px red;
+        box-shadow: 0 0 20px darkred, 0 0 20px darkred;
     }
     80%{
-         box-shadow: 0 0 20px red, 0 0 15px red;
+         box-shadow: 0 0 20px darkred, 0 0 15px darkred;
     }
     90%{
-        box-shadow: 0 0 15px red, 0 0 10px red;
+        box-shadow: 0 0 15px darkred, 0 0 10px darkred;
     }
     95%{
-        box-shadow: 0 0 13px red, 0 0 5px red;
+        box-shadow: 0 0 13px darkred, 0 0 5px darkred;
     }
     100% {
-        box-shadow: 0 0 10px red, 0 0 3px red;
+        box-shadow: 0 0 10px darkred, 0 0 3px darkred;
     }
 }
 
@@ -239,36 +238,51 @@ span{
     }
 }
 
-/* Services Page */
+/* =====Services Section===== */
+
+section{
+    display: block;
+    text-align: center;
+}
+
+section h1{
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+}
 
 .cards{
-    display:flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     justify-content: center;
     align-items: center;
-    gap: 4rem;
-    flex-wrap: wrap;
-    margin-top: 4rem;
+    gap: 20px;
 }
 
-.card{
+.cards .card{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgb(46, 46, 65);
-    border-radius: 7%;
-    border: 1px solid black;
-    box-shadow: 0 0 10px cyan;
-    width: 20rem;
-    height: 20rem;
+    background-color: rgb(14, 13, 13);
     padding: 2rem;
-    transition: all 0.3s ease-in-out;
+    margin: 10px;
+    border-radius: 10px;
+    width: 330px;
+    height: 200px;
+    box-shadow: 0px 0px 20px darkred;
+    transition: 0.3s ease;
 }
 
-.card:hover{
-    transform: rotateY(30deg)  scale(1.01);
-    box-shadow: 0px 0px 5px cyan;
+.cards .card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0px 0px 30px red;
+}
 
+.card h3{
+    font-size: 1.8rem;
+    color: white;
+    text-align: center;
 }
 
 /* ===== RESPONSIVE STYLES ===== */
@@ -298,13 +312,13 @@ span{
         padding: 8rem 5% 5rem;
     }
     
-    .home {
+    #home-section {
         flex-direction: column;
         gap: 4rem;
         text-align: center;
     }
     
-    .home .home-content h1 {
+    #home-section .home-content h1 {
         font-size: 3rem;
         margin-bottom: 2rem;
     }
@@ -368,7 +382,7 @@ span{
         margin-left: 0;
     }
     
-    .home .home-content h1 {
+    #home-section .home-content h1 {
         font-size: 2.5rem;
     }
     
@@ -393,7 +407,6 @@ span{
     }
 }
 
-/* Fix for very small screens */
 @media (max-width: 320px) {
     nav {
         flex-wrap: wrap;
@@ -405,7 +418,7 @@ span{
         padding: 0.5rem;
     }
     
-    .home .home-content h1 {
+    #home-section .home-content h1 {
         font-size: 2rem;
     }
     
