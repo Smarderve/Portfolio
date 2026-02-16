@@ -38,6 +38,10 @@ header{
 }
 
 .logo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     font-size: 4rem;
     text-decoration: none;
     color: cyan;
@@ -60,22 +64,35 @@ nav a{
 
 section{
     min-height: 100vh;
-    padding: 5rem 9% 5rem;
+    padding: 5rem 9% 1rem;
 }
 
 #home-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 50px 10px;
+}
+
+.home-main{
     display:flex;
     justify-content: center;
     align-items: center;
     gap: 8rem;
+    margin-top: auto;
     background-color: black;
 }
 
-#home-section .home-content h1{
+.home-content{
+    text-align: start;
+}
+
+.home-content h1{
     font-size: 4rem;
     font-weight: 700;
     line-height: 1.3;
-    margin-bottom: 10px;
+    margin: 70px 0 10px;
 }
 
 span{
@@ -110,6 +127,40 @@ span{
     margin: 10px;
     border-radius: 50%;
     cursor: pointer;
+}
+
+.home-buttom{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    gap: 20px;
+    padding: 1rem 2rem;
+    margin-top: auto;
+
+    color: rgb(177, 171, 171);
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+.home-buttom .tab{
+    display: inline-flex;
+    justify-content: start;
+    align-items: center;
+    border-right: 1px solid rgb(177, 171, 171);
+    padding: 0 30px;
+}
+
+.tab h2{
+    font-size: 3rem;
+    font-weight: 600;
+    color: red;
+}
+
+.tab p{
+    width: 100px;
+    font-size: 1.2rem;
+    color: rgb(177, 171, 171);
 }
 
 
@@ -155,10 +206,17 @@ span{
     }
 }
 
+.social-icons{
+    display: flex;
+    justify-content: start;
+    align-items: start;
+}
+
 .social-icons a{
     display: inline-flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     width: 4rem;
     height: 4rem;
     background-color: transparent;
@@ -173,6 +231,7 @@ span{
 
 .social-icons a svg,
 .social-icons a svg path{
+    margin: 0;
     cursor: pointer;
     color: rgb(177, 171, 171);
 }
@@ -238,7 +297,73 @@ span{
     }
 }
 
-/* =====Services Section===== */
+/*About Section*/
+
+#about-section{
+    padding: 50px 5px;
+}
+
+.containers{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+    gap: 20px;
+}
+
+.image img{
+    width: 70vh;
+    height: 75vh;
+    box-shadow: 0px 0px 5px darkred;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    text-align: start;
+    padding: 20px;
+    width: 100%;
+    max-width: 800px;
+}
+
+.container h2{
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.container p{
+    font-size: 1.2rem;
+    color: rgb(177, 171, 171);
+    margin-bottom: 10px;
+}
+
+.container button{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2rem;
+    margin-top: 30px;
+    border: none;
+    border-radius: 5px;
+    background-color: darkred;
+    color: rgb(207, 200, 200);
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.container button:hover{
+    background-color: rgba(255, 0, 0, 0.829);
+    color: white;
+}
+
+.container button:active{
+    transform: scale(0.93);
+}
+
+/* =====Other Sections===== */
 
 section{
     display: block;
@@ -283,6 +408,105 @@ section h1{
     font-size: 1.8rem;
     color: white;
     text-align: center;
+}
+
+/*====Contact Section=======*/
+
+#contact-section{
+    padding: 10px;
+}
+
+.contact-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: start;
+    padding: 10px;
+    flex-wrap: wrap;
+}
+
+.contact-card, .contact-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    text-align: start;
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    background-color: rgb(14, 13, 13);
+    border-radius: 3px;
+    box-shadow: 0px 0px 10px darkred;
+}
+
+.contact-card{
+    padding: 50px;
+}
+
+.contact-card h3{
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.contact-card p{
+    font-size: 1.2rem;
+    color: rgb(177, 171, 171);
+    margin-bottom: 20px;
+}
+
+.contact-card .contact-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    font-size: 1.4rem;
+    padding: 1rem 0;
+}
+
+.contact-card .contact-info svg{
+    margin-right: 1rem;
+}
+
+.contact-form input, .contact-form textarea{
+    width: 100%;
+    max-width: 600px;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    border: none;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+}
+
+.contact-form textarea{
+    resize: vertical;
+    min-height: 250px;
+}
+
+.contact-form input:focus, .contact-form textarea:focus{
+    outline: 2px solid darkred;
+}
+
+.contact-form button{
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    background-color: darkred;
+    color: rgb(177, 171, 171);
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contact-form button:hover{
+    background-color: darkred;
+    color: white;
+}
+
+.contact-form button:active{
+    transform: scale(0.9);
 }
 
 /* ===== RESPONSIVE STYLES ===== */
