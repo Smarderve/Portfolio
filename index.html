@@ -8,13 +8,18 @@
     <link rel="icon" href="/assets/images/Icon.png" type="image/x-icon">
 </head>
 <body>
-    <header>
+    <!--<header>
         <a href="#home-section" class="logo">
             <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 24 24">
 	<path fill="#fff" d="M3 6.25v11.5A3.25 3.25 0 0 0 6.25 21h11.5A3.25 3.25 0 0 0 21 17.75V6.25A3.25 3.25 0 0 0 17.75 3H6.25A3.25 3.25 0 0 0 3 6.25M15.5 12a1.5 1.5 0 0 1 1.5 1.5v.5c0 1.971-1.86 4-5 4s-5-2.029-5-4v-.5A1.5 1.5 0 0 1 8.5 12zM12 5.5a2.75 2.75 0 1 1 0 5.5a2.75 2.75 0 0 1 0-5.5" />
 </svg>Port<span>folio.</span>
         </a>
-        <nav>
+        <button type="button" class="hamburger-toogle">
+            <span class="hamburger"></span>
+            <span class="hamburger"></span>
+            <span class="hamburger"></span>
+        </button>
+        <nav class="nav-bar">
             <a href="#home-section">Home</a>
             <a href="#about-section">About</a>
             <a href="#education-section">Education</a>
@@ -23,7 +28,30 @@
             <a href="#services-section">Services</a>
             <a href="#contact-section">Contact</a>
         </nav>
-    </header>
+    </header>-->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="#home-section" class="logo">
+                <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 24 24">
+                    <path fill="#fff" d="M3 6.25v11.5A3.25 3.25 0 0 0 6.25 21h11.5A3.25 3.25 0 0 0 21 17.75V6.25A3.25 3.25 0 0 0 17.75 3H6.25A3.25 3.25 0 0 0 3 6.25M15.5 12a1.5 1.5 0 0 1 1.5 1.5v.5c0 1.971-1.86 4-5 4s-5-2.029-5-4v-.5A1.5 1.5 0 0 1 8.5 12zM12 5.5a2.75 2.75 0 1 1 0 5.5a2.75 2.75 0 0 1 0-5.5" />
+                </svg>Port<span>folio.</span>
+            </a>
+            <button type="button" class="hamburger-toogle">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+            <ul class="navbar-menu">
+                <li><a href="#home-section" class="active">Home</a></li>
+                <li><a href="#about-section">About</a></li>
+                <li><a href="#education-section">Education</a></li>
+                <li><a href="#experience-section">Experience</a></li>
+                <li><a href="#skills-section">Skills</a></li>
+                <li><a href="#services-section">Services</a></li>
+                <li><a href="#contact-section">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
     <section id="home-section">
         <div class="home-main">
             <div class="home-image">
@@ -466,5 +494,6 @@
     <footer>
         <p>&copy;Copyright 2026 Personal Portfolio, All Rights Reserved.</p>
     </footer>
+    <script src="Script.js"></script>
 </body>
 </html>
