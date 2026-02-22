@@ -810,148 +810,6 @@ footer p{
     html {
         font-size: 55%;
     }
-
-    .navbar{
-        backdrop-filter: none;
-    }
-
-    .navbar-menu{
-        display: none;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1.7rem !important;
-        padding: 5rem 1.5rem;
-        position: absolute;
-        top: 0;
-        right: 0;
-        height: 300px;
-        width: 250px;
-        background: transparent;
-        backdrop-filter: blur(10px);
-    }
-
-    .navbar-menu.active{
-        display: flex;
-    }
-    
-    .navbar-menu li a {
-        font-size: 1.4rem;
-        margin-left: 1.5rem;
-        margin-right: 0;
-    }
-
-    .hamburger-toogle{
-        display: block;
-        z-index: 999;
-    }
-
-    .hamburger-toogle.active .hamburger:nth-child(1){
-        transform: translateY(5px) rotate(45deg);
-    }
-
-    .hamburger-toogle.active .hamburger:nth-child(2){
-        opacity: 0;
-    }
-
-    .hamburger-toogle.active .hamburger:nth-child(3){
-        transform: translateY(-5px) rotate(-45deg);
-    }
-    
-    section {
-        padding: 8rem 5% 5rem;
-    }
-    
-    #home-section {
-        gap: 4rem;
-        text-align: center;
-        padding: 30px;
-    }
-
-    .home-main{
-        display: flex;
-        flex-direction: column;
-        gap: 3rem;
-        padding-top: 30px;
-    }
-    
-    .home-content h1 {
-        font-size: 3rem;
-        margin-bottom: 2rem;
-    }
-    
-    .home-content h3 {
-        font-size: 2rem;
-        margin-bottom: 2rem;
-    }
-    
-    .home-image {
-        margin-top: auto;
-        margin-left: 0;
-        order: -1; 
-    }
-    
-    .home-image img {
-        width: 60vw;
-        height: 60vh;
-    }
-    
-    .typing-text {
-        font-size: 2.4rem;
-        min-width: 250px;
-    }
-    
-    .social-icons {
-        display: flex;
-        justify-content: center;
-        gap: 5px;
-    }
-    
-    .social-icons a {
-        margin: 5px;
-        width: 3rem;
-        height: 3rem;
-    }
-
-    /*About section*/
-
-    #about-section,#education-section, #experience-section, #services-section, #skills-section, #contact-section{
-        padding: 30px 10px;
-    }
-
-    .containers, .container{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
-
-    .image img{
-        width: 50vh;
-        height: 55vh;
-    }
-
-    /*Experience && Education Section*/
-
-    .education-cards, .experience-cards{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
-    }
-
-    footer{
-        margin-top: 30px;
-    }
-}
-
-/*Small Screen Mobile*/
-
-@media (max-width: 480px) {
-  html {
-        font-size: 55%;
-    }
     
     .navbar{
         backdrop-filter: none;
@@ -1039,6 +897,7 @@ footer p{
     }
 
     .home-content p{
+        font-size: 1rem;
         margin: 0 40px 20px;
         text-align: center;
     }
@@ -1075,7 +934,7 @@ footer p{
     }
 
     section h1{
-        font-size: 3rem;
+        font-size: 2rem;
     }
 
     /*About section*/
@@ -1090,6 +949,200 @@ footer p{
         justify-content: center;
         align-items: center;
         text-align: center;
+    }
+
+    .image img{
+        width: 30vh;
+        height: 35vh;
+    }
+
+    /*Experience && Education Section*/
+
+    .education-cards, .experience-cards, .cards{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .education-card h3, .experience-card h3{
+        flex-direction: row;
+        text-align: start;
+        padding: 0;
+        margin: 0;
+    }
+
+    .education-card .timeline, .experience-card .timeline{
+        align-self: flex-start;
+    }
+
+    footer{
+        margin-top: 30px;
+    }
+}
+
+
+/*Small Screen Mobile*/
+
+@media (max-width: 480px) {
+  html {
+        font-size: 55%;
+    }
+    
+    .navbar{
+        backdrop-filter: none;
+    }
+
+    .navbar-container{
+        padding: 0 10px;
+    }
+
+    .logo{
+        font-size: 3rem;
+        margin-right: 20px;
+    }
+
+    .logo svg{
+        width: 30px;
+        height: 30px;
+    }
+
+    .navbar-menu{
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.7rem !important;
+        padding: 3rem 1.5rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 280px;
+        width: 250px;
+        background: transparent;
+        box-shadow: 0 0px 10px darkred;
+        backdrop-filter: blur(10px);
+    }
+
+    .navbar-menu.active{
+        display: flex;
+    }
+    
+    .navbar-menu li a {
+        font-size: 1.4rem;
+        margin: 15px 0 0 1.3rem;
+    }
+
+    .hamburger-toogle{
+        display: block;
+        z-index: 999;
+    }
+
+    .hamburger-toogle.active .hamburger:nth-child(1){
+        transform: translateY(5px) rotate(45deg);
+    }
+
+    .hamburger-toogle.active .hamburger:nth-child(2){
+        opacity: 0;
+    }
+
+    .hamburger-toogle.active .hamburger:nth-child(3){
+        transform: translateY(-5px) rotate(-45deg);
+    }
+    
+    section {
+        padding: 8rem 5% 5rem;
+    }
+    
+    #home-section {
+        text-align: center;
+        padding: 30px 10px;
+    }
+
+    .home-main{
+        display: flex;
+        flex-direction: column;
+        padding-top: 60px;
+    }
+    
+    .home-content h1 {
+        font-size: 3rem;
+        margin:  2rem 0;
+    }
+    
+    .home-content h3 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .home-content p{
+        font-size: 1rem;
+        margin: 0 40px 20px;
+        text-align: center;
+    }
+    
+    .home-image {
+        margin-top: auto;
+        margin-left: 0;
+        order: -1; 
+    }
+    
+    .home-image img {
+        width: 60vw;
+        height: 30vh;
+    }
+    
+    .typing-text {
+        font-size: 2.4rem;
+    }
+    
+    .social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 5px;
+    }
+    
+    .social-icons a {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .home-buttom{
+        margin: 0;
+        gap: 10px;
+        padding: 10px 0;
+    }
+        
+    .tab h2{
+        font-size: 2.5rem;
+    }
+        
+    .home-buttom .tab{
+        justify-content: start;
+        align-items: start;
+        padding: 0 2px;
+    }
+
+    section h1{
+        font-size: 2rem;
+    }
+
+    /*About section*/
+
+    #about-section,#education-section, #experience-section, #services-section, #skills-section, #contact-section{
+        padding: 30px 20px;
+    }
+
+    .containers, .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .container h2{
+        font-size: 2.5rem;
     }
 
     .image img{
