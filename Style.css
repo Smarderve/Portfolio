@@ -113,6 +113,7 @@ body{
     border: none;
     outline: none;
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .hamburger{
@@ -447,11 +448,11 @@ span{
     transform: scale(0.93);
 }
 
-.container .button:focus, .contact-form button:focus, .social-icons:focus, .social-icons a:focus, .contact-info:focus{
+.container .button:focus, .hamburger-toggle, .contact-form button:focus, .social-icons:focus, .social-icons a:focus, .contact-info:focus{
     outline: none;
 }
 
-.container .button:focus-visible, .contact-form button:focus-visible, .social-icons:focus-visible, .social-icons a:focus-visible, .contact-info:focus-visible{
+.container .button:focus-visible, .hamburger-toggle:focus-visible, .contact-form button:focus-visible, .social-icons:focus-visible, .social-icons a:focus-visible, .contact-info:focus-visible{
     outline: 2px solid red;
     outline-offset: 2px;
 }
